@@ -1,12 +1,5 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 # AKG Industries Website
 
 This repository contains the source code for the official website of AKG Industries, a premier manufacturer and supplier of industrial components and solutions. The website is built using the Laravel PHP framework, providing a modern, responsive, and maintainable online presence.
@@ -20,14 +13,13 @@ The AKG Industries website serves as a digital storefront and information hub, d
 * **Contact Form with Database Storage:** A fully functional contact form that captures user inquiries and securely stores them in a database, ensuring no lead is missed.
 * **Responsive Design:** The layout is optimized to provide an excellent viewing experience across a wide range of devices, from desktops to mobile phones.
 * **Unified Layout:** Utilizes a consistent header, navigation, and footer across all pages, managed through Blade templating.
-* **Global Background:** Features a subtle, fixed background image with transparency across all pages for a consistent aesthetic.
 
 ## Technologies Used
 
 This project leverages a modern web development stack to ensure robustness, performance, and ease of development:
 
 * **Laravel (PHP Framework):**
-    * **Why:** Chosen for its elegant syntax, robust features (like ORM, routing, and task scheduling), MVC architecture, and large, active community. It accelerates backend development and ensures a scalable application.
+    * **Why:** Chosen for its elegant syntax, robust features, MVC architecture, and large, active community. It accelerates backend development and ensures a scalable application.
 * **PHP:**
     * **Why:** The foundational server-side scripting language upon which Laravel is built. It's widely used, mature, and efficient for web applications.
 * **Composer:**
@@ -35,11 +27,9 @@ This project leverages a modern web development stack to ensure robustness, perf
 * **MySQL (or equivalent, e.g., MariaDB/PostgreSQL):**
     * **Why:** A popular relational database management system used to store structured data, such as contact form submissions.
 * **Blade Templating Engine:**
-    * **Why:** Laravel's lightweight yet powerful templating engine. It allows for clean, reusable HTML structures by enabling the use of simple, elegant syntax for PHP logic within views.
+    * **Why:** Laravel's lightweight yet powerful templating engine. It enables clean, reusable HTML structures by allowing the use of simple, elegant syntax for PHP logic within views.
 * **Tailwind CSS:**
     * **Why:** A utility-first CSS framework. It enables rapid UI development by providing low-level utility classes directly in the HTML, promoting highly customizable and responsive designs without writing custom CSS.
-* **Vite:**
-    * **Why:** A next-generation frontend build tool that integrates seamlessly with Laravel. It offers an incredibly fast development server (Hot Module Replacement - HMR) and optimized builds for production, handling CSS (Tailwind) and JavaScript assets.
 * **NPM (Node Package Manager):**
     * **Why:** Used for managing JavaScript dependencies, including Tailwind CSS and other frontend build tools.
 * **Git:**
@@ -55,7 +45,7 @@ Follow these steps to get the AKG Industries website up and running on your loca
 
 Before you begin, ensure you have the following installed:
 
-* **Web Server Environment:** WAMP, XAMPP, Laragon (Windows), or Valet (macOS), or a Docker-based environment. This provides PHP, MySQL, and Apache/Nginx.
+* **Web Server Environment:** WAMP. This provides PHP, MySQL, and Apache.
 * **PHP:** Version 8.1 or higher (compatible with Laravel 10/11).
 * **Composer:** [Download Composer](https://getcomposer.org/download/).
 * **Node.js & NPM:** [Download Node.js](https://nodejs.org/en/download/) (NPM comes with Node.js).
@@ -64,31 +54,29 @@ Before you begin, ensure you have the following installed:
 ### Installation Steps
 
 1.  **Clone the Repository:**
-    ```bash
+    ```bash/cmd
     git clone [https://github.com/Astar236/akg_website.git](https://github.com/Astar236/akg_website.git) # Replace with your actual repository URL
     ```
 2.  **Navigate to the Project Directory:**
-    ```bash
+    ```bash/cmd
     cd akg_website
     ```
 3.  **Install PHP Dependencies:**
-    ```bash
+    ```bash/cmd
     composer install
     ```
 4.  **Install JavaScript Dependencies:**
-    ```bash
+    ```bash/cmd
     npm install
-    # Or if you use Yarn: yarn install
     ```
 5.  **Set Up Environment File:**
     Laravel uses an `.env` file for environment-specific configurations (like database credentials, app key).
-    ```bash
-    cp .env.example .env  # For Linux/macOS
+    ```bash/cmd
     # For Windows: copy .env.example .env
     ```
 6.  **Generate Application Key:**
     This command generates a unique application key for your `.env` file, which is crucial for security.
-    ```bash
+    ```bash/cmd
     php artisan key:generate
     ```
 7.  **Database Configuration:**
@@ -104,29 +92,18 @@ Before you begin, ensure you have the following installed:
         ```
 8.  **Run Database Migrations:**
     This will create the necessary tables in your database, including `contact_submissions`.
-    ```bash
+    ```bash/cmd
     php artisan migrate
     ```
-9.  **Place Required Images:**
-    Ensure you have the following images in their respective `public/images` subfolders:
-    * `public/images/logo.png`
-    * `public/images/logo2.png` (for the header)
-    * `public/images/global_background.jpg` (for the transparent global background)
-    * `public/images/hero_background.jpg` (for the hero section on the home page)
-    * `public/images/director.jpg`
-    * `public/images/clients/client1.png` to `client17.png` (for client logos)
-    * `public/images/products/pipe.jpg`, `tube.jpg`, `section.jpg`, `fittings.jpg`, `valves.jpg`, `flanges.jpg`
-    * `public/images/badges/best-quality.png`, `nabcb.png`, `iaf.png`, `on-time-delivery.png`, `reasonable-price.png`, `quality-assurance.png`
-10. **Start Development Servers:**
+9.  **Start Development Servers:**
     You need two separate terminal windows for this:
     * **Terminal 1 (Laravel Development Server):**
-        ```bash
+        ```bash/cmd
         php artisan serve
         ```
     * **Terminal 2 (Vite Frontend Server):**
-        ```bash
+        ```bash/cmd
         npm run dev
-        # Or if you use Yarn: yarn dev
         ```
         Keep this terminal running while you are developing, as it will automatically recompile your CSS and JS.
 
