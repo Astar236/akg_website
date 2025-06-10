@@ -2,13 +2,15 @@
 
 @section('title', 'About Us')
 
+@section('bg-image', "background-image: url('/images/about-us-bg.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;")
+
 @section('content')
 
 <!-- About Us Section -->
 <div class="container px-4 py-8 mx-auto">
     <h1 class="mb-10 text-4xl font-extrabold text-center text-blue-800">About AK Oxygen PVT LTD</h1>
 
-    <div class="flex flex-col items-center gap-8 p-8 mb-12 bg-white rounded-lg shadow-xl md:flex-row">
+    <div class="flex flex-col items-center gap-8 p-8 mb-12 bg-white bg-opacity-50 rounded-lg shadow-xl md:flex-row">
         <div class="md:w-1/2">
             <img src="{{ asset('images/about-us.jpg') }}" alt="About Us" class="w-full h-auto transition-transform duration-500 shadow-2xl rounded-xl hover:scale-105">
         </div>
@@ -44,15 +46,15 @@
     </div>
 
     <!-- Director's Message Section -->
-    <section class="py-16 bg-white md:py-24">
-        <div class="container px-6 mx-auto max-w-7xl">
+    <section class="py-16 md:py-24">
+        <div class="container px-6 mx-auto bg-white bg-opacity-50 rounded-lg shadow-xl max-w-7xl">
             <div class="mb-12 text-center md:mb-16">
                 <h2 class="mb-4 text-4xl font-bold text-gray-800 md:text-5xl">A Message from Our Director</h2>
                 <div class="h-1.5 w-28 bg-blue-600 mx-auto rounded-full"></div>
             </div>
 
             {{-- New container for the letter-like message --}}
-            <div class="container max-w-5xl px-4 py-8 mx-auto border border-gray-100 shadow-xl bg-gray-50 rounded-xl">
+            <div class="container max-w-5xl px-4 py-8 mx-auto bg-white bg-opacity-50 border border-gray-100 shadow-xl rounded-xl">
                 <div class="flex flex-col items-center gap-10 md:flex-row">
                     <div class="text-center md:text-left">
                         {{-- Letter content --}}
@@ -92,26 +94,26 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="p-8 my-10 rounded-lg shadow-inner bg-gray-50">
+    <section class="p-8 my-10 bg-white bg-opacity-50 rounded-lg shadow-inner">
         <h2 class="mb-8 text-3xl font-bold text-center text-gray-800">Why Choose AK Oxygen PVT LTD?</h2>
         <ul class="max-w-3xl mx-auto space-y-4 text-lg text-gray-700">
-            <li class="flex items-start p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <li class="flex items-start p-4 bg-white bg-opacity-50 border border-gray-200 rounded-lg shadow-sm">
                 <span class="mr-3 text-2xl font-bold text-green-500">✔</span>
                 <span>Proven track record of quality and reliability, built over decades of successful projects.</span>
             </li>
-            <li class="flex items-start p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <li class="flex items-start p-4 bg-white bg-opacity-50 border border-gray-200 rounded-lg shadow-sm">
                 <span class="mr-3 text-2xl font-bold text-green-500">✔</span>
                 <span>ISO-certified production processes ensuring adherence to the highest international quality standards.</span>
             </li>
-            <li class="flex items-start p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <li class="flex items-start p-4 bg-white bg-opacity-50 border border-gray-200 rounded-lg shadow-sm">
                 <span class="mr-3 text-2xl font-bold text-green-500">✔</span>
                 <span>Highly experienced and skilled workforce, dedicated to precision engineering and client satisfaction.</span>
             </li>
-            <li class="flex items-start p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <li class="flex items-start p-4 bg-white bg-opacity-50 border border-gray-200 rounded-lg shadow-sm">
                 <span class="mr-3 text-2xl font-bold text-green-500">✔</span>
                 <span>State-of-the-art infrastructure and machinery, allowing for complex and large-scale manufacturing capabilities.</span>
             </li>
-            <li class="flex items-start p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+            <li class="flex items-start p-4 bg-white bg-opacity-50 border border-gray-200 rounded-lg shadow-sm">
                 <span class="mr-3 text-2xl font-bold text-green-500">✔</span>
                 <span>Unwavering commitment to customer satisfaction, providing tailored solutions and exceptional support.</span>
             </li>

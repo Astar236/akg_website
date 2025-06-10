@@ -13,6 +13,7 @@ class ContactController extends Controller
      * @return \Illuminate\View\View
      */
     
+     
     public function showForm()
     {
         return view('pages.contact');

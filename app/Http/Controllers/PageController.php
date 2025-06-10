@@ -10,6 +10,7 @@ class PageController extends Controller
      * Display the home page.
      * @return \Illuminate\View\View
      */
+
     public function home()
     {
         return view('pages.home');
@@ -19,7 +20,8 @@ class PageController extends Controller
      * Display the about us page.
      * @return \Illuminate\View\View
      */
-    public function about()
+    
+     public function about()
     {
         return view('pages.about');
     }
@@ -28,7 +30,8 @@ class PageController extends Controller
      * Display the products index page.
      * @return \Illuminate\View\View
      */
-    public function productsIndex()
+    
+     public function productsIndex()
     {
         return view('pages.products.index');
     }
@@ -39,7 +42,8 @@ class PageController extends Controller
      * Display the certificates page.
      * @return \Illuminate\View\View
      */
-    public function certificates()
+    
+     public function certificates()
     {
         return view('pages.certificates');
     }
@@ -48,7 +52,8 @@ class PageController extends Controller
      * Display the contact form page.
      * @return \Illuminate\View\View
      */
-    public function contact()
+
+     public function contact()
     {
         return view('pages.contact');
     }
